@@ -10,6 +10,10 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: 'Internal Server Error' });
 });
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Taskly!' });
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
